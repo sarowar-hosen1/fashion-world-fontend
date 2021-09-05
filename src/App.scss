@@ -1,0 +1,16 @@
+$main-color: #FCDF00;
+ 
+@mixin  button-style {
+    background-color: $main-color;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.btn-brand{
+    background-color: #FFB200;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+section{
+    margin: 50px 0;
+}

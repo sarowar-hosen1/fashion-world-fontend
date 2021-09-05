@@ -1,0 +1,19 @@
+.order-wrapper {
+  margin: 20px 10px;
+  .table-responsive {
+    position: relative;
+  }
+  .table {
+    .thead {
+      background: black;
+      color: white;
+      font-size: 14px;
+      line-height:45px;
+    }
+    tr,
+    td {
+      padding: 20px 0;
+      padding-left: 10px;
+    }
+  }
+}

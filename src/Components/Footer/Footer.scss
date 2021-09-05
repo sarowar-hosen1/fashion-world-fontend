@@ -1,0 +1,28 @@
+footer {
+  background-color: black;
+  color: white;
+  padding: 50px 0px 20px 0px;
+  .footer-card {
+    padding: 0px 10px;
+    h5 {
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid white;
+    }
+    p {
+      font-size: 14px;
+    }
+    .social-icons {
+      i {
+        padding: 10px;
+        font-size: 15px;
+      }
+    }
+    li {
+      padding: 4px 0px;
+      i {
+        margin-right: 10px;
+      }
+    }
+  }
+}

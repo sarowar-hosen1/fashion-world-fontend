@@ -1,0 +1,30 @@
+.dashboard-home {
+  .feature-card {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 25px 20px;
+    text-align: center;
+    background: #fbfbfb;
+    border: 1px solid #f7f7f7;
+    margin: 20px 0;
+
+    svg{
+      font-size: 50px;
+    }
+  }
+  .feature-card.\31 {
+    background-color: #ffc107;
+  }
+  .feature-card.\32 {
+    background-color: #0dcaf0;
+  }
+  .feature-card.\33 {
+    background-color: powderblue;
+  }
+
+  .dashboard-chart{
+    background-color: #f9f9f9;
+    padding: 25px;
+  }
+}

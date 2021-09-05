@@ -1,0 +1,21 @@
+.no-match{
+    width:100%;
+}
+.no-match-wrapper{
+    width: 100%;
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    color: gray;
+}
+
+.no-match-wrapper svg{
+    font-size: 120px;
+    font-weight: normal;
+}
+.no-match-wrapper h1{
+    font-size: 56px;
+    margin: 20px 0;
+}

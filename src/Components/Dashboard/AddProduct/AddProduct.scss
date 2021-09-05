@@ -1,0 +1,80 @@
+$border-color: 1px solid #dfdfdf;
+@mixin label-style {
+  font-family: monospace;
+  font-size: 16px;
+  font-weight: 600;
+}
+@mixin input-select-textarea-style {
+  width: 100%;
+  padding: 10px 12px;
+  border: $border-color;
+}
+
+.addProduct {
+  form {
+    max-width: 700px;
+    width: 100%;
+    padding: 0px 10px 10px 20px;
+  }
+  //form info
+  .form-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .input-box {
+      width: calc(100% / 2 - 20px);
+      margin: 15px 0px;
+      input,
+      select {
+        @include input-select-textarea-style();
+      }
+      label {
+        @include label-style();
+      }
+    }
+  }
+
+  //form details
+  .input-details {
+    width: 100%;
+    textarea {
+      @include input-select-textarea-style();
+    }
+    label {
+      @include label-style();
+    }
+  }
+
+  // upload box
+  .upload-box {
+    width: 100%;
+    #image {
+      display: none;
+    }
+    #Upload {
+      svg {
+        font-size: 100px;
+        color: #0d6efd;
+        margin-right: 20px;
+      }
+    }
+  }
+
+  span{
+      font-size: 14px;
+      color: red;
+      font-family: monospace;
+  }
+
+  // button
+  input[type="submit"] {
+    background-color: #157347;
+    padding: 6px 30px;
+    border: 1px solid black;
+    color: white;
+    display: block;
+    margin-left: auto;
+    font-weight: 600;
+  }
+}
