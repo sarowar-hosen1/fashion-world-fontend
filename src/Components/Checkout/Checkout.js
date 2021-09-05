@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from 'react-router-dom';
-import swal from 'sweetalert';
 import { resetCart } from '../../Redux';
 import Estimate from '../Estimate/Estimate';
 import ShippingAddress from '../ShippingAddress/ShippingAddress';
+import swal from 'sweetalert';
 
 const Checkout = () => {
+    
     const cart = useSelector(state => state.cartItems.carts)
     const [shippingInfo, setShippingInfo] = useState(null);
+
     const dispatch = useDispatch();
     const history = useHistory();
 

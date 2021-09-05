@@ -9,6 +9,8 @@ const FeatureProducts = () => {
 
     const dispatch = useDispatch()
     const myProducts = useSelector(state => state.myProducts.products)
+
+    // pagination
     const [pageNumber, setPageNumber] = useState(1);
     const [productPerPage, setProductPerPage] = useState(12);
 
@@ -16,6 +18,7 @@ const FeatureProducts = () => {
     const firstIndexOfProduct = lastIndexOfProducts - productPerPage;
     const currentProduct = myProducts.slice(firstIndexOfProduct, lastIndexOfProducts)
 
+    // fetch all featured products
     useEffect(() => {
         dispatch(productsRequest())
         fetch("https://calm-mountain-62998.herokuapp.com/allProducts")
@@ -51,7 +54,7 @@ const FeatureProducts = () => {
             <div className="container">
                 <div className="head-of-section">
                     <div className="d-flex justify-content-between">
-                        <h3>FEATURE PRODUCTS</h3>
+                        <h5>FEATURE PRODUCTS</h5>
                         <select onChange={(e) => handleSorted(e.target.value)} name="" id="" className="form-control custom-select">
                             <option value="default">Defaul Collection</option>
                             <option value="low_to_high">Price low to high</option>

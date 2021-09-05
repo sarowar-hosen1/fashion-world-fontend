@@ -1,13 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { productsError, productsRequest, productsSuccess } from '../../Redux/products/productsAction';
 import PaginationBar from '../PaginationBar/PaginationBar';
 import ProductCard from '../ProductCard/ProductCard';
+import {
+    productsError,
+    productsRequest,
+    productsSuccess
+} from '../../Redux/products/productsAction';
 import "./Collection.scss";
 
 const SummerCollection = () => {
+
     const dispatch = useDispatch();
+    
     const { collectionName } = useParams();
     const myProducts = useSelector(state => state.myProducts.products);
 

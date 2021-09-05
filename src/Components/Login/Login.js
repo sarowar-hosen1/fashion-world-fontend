@@ -12,6 +12,7 @@ const Login = () => {
     const [returnUser, setReturnUser] = useState(true);
     const auth = Auth();
 
+    // handle googl sign in
     const handleGoogleSignIn = () => {
         auth.googleSignIn()
     }
@@ -37,11 +38,6 @@ const Login = () => {
                     <i onClick={() => swal({ text: "Service not available" })} className="text-primary"><ImFacebook2 /></i>
                 </div>
             </div>
-            {/* {
-                error &&
-                <p className="text-danger">{error}</p>
-            } */}
-
         </div>
     );
 };

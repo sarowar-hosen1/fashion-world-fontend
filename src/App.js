@@ -11,10 +11,10 @@ import {
   Dashboard_page
 } from "./Pages/Index";
 
-import './App.scss';
 import Login_page from './Pages/Login_page';
 import NoMatch from './Components/NoMatch/NoMatch';
 import { useSelector } from 'react-redux';
+import './App.scss';
 
 const App = () => {
   const admin = useSelector(state => state.admin.admin);

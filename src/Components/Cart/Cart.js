@@ -1,10 +1,10 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { MdDelete } from "react-icons/md"
-import "./Cart.scss";
 import { useHistory } from 'react-router-dom';
 import { removeFromCart } from "../../Redux/index";
 import Estimate from '../Estimate/Estimate';
+import "./Cart.scss";
 
 const Cart = () => {
     const history = useHistory()

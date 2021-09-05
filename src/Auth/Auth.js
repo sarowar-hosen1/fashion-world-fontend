@@ -2,8 +2,8 @@ import { initializeApp } from "firebase/app";
 import firebaseConfig from "../Config/firebaseConfig";
 import useLocalStorage from "react-use-localstorage";
 import { useHistory, useLocation } from "react-router-dom";
-import swal from "sweetalert";
 import { useState } from "react";
+import swal from "sweetalert";
 
 import {
     getAuth,
@@ -15,7 +15,6 @@ import {
     signOut,
 } from "firebase/auth";
 
-const googleProvider = new GoogleAuthProvider();
 
 initializeApp(firebaseConfig)
 
@@ -70,6 +69,7 @@ export const Auth = () => {
 
     //GOOGLE SIGN_IN
     const googleSignIn = () => {
+        const googleProvider = new GoogleAuthProvider();
         signInWithPopup(auth, googleProvider)
             .then(result => {
                 const { displayName, email, photoURL } = result.user;

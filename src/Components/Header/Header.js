@@ -8,7 +8,6 @@ import './Header.scss';
 
 const Header = () => {
     const auth = Auth();
-
     const dispath = useDispatch();
 
     const user = JSON.parse(localStorage.getItem('userInfo'));
@@ -17,9 +16,9 @@ const Header = () => {
     const wish = useSelector(state => state.wishItems.wish);
     const admin = useSelector(state => state.admin.admin);
 
+    // Verify is Admin
     useEffect(() => {
         const token = sessionStorage.getItem('token');
-
         fetch("https://calm-mountain-62998.herokuapp.com/isAdmin", {
             method: "POST",
             headers: {

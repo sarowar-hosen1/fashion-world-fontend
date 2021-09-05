@@ -1,15 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useHistory } from "react-router-dom"
-import { useDispatch, useSelector } from "react-redux"
+import { useDispatch } from "react-redux"
 import { addToCart, addToWish } from "../../Redux/index";
+import swal from "sweetalert";
 import './ProductCard.scss'
 
 const ProductCard = ({ product }) => {
 
     const dispatch = useDispatch()
-
-    // const cart = useSelector(state => state.cartItems.carts);
-    // console.log(cart);
 
     const history = useHistory()
     const handleProductDetails = (id) => {
@@ -19,11 +17,13 @@ const ProductCard = ({ product }) => {
 
     const hanldeAddCart = (product) => {
         dispatch(addToCart(product))
+        swal({ text: "Product added to cart", })
     }
 
 
     const handleAddWish = (product) => {
         dispatch(addToWish(product))
+        swal({ text: "Product added to wish list" })
     }
 
 

@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import {useDispatch} from "react-redux";
+import { addToCart } from "../../Redux/index";
+import swal from "sweetalert";
 import './ProductDetail.scss';
 
 const ProductDetails = () => {
-
+    const dispatch = useDispatch();
     const { id } = useParams()
     const [product, setProduct] = useState({})
     const [image, setImage] = useState("")
+    console.log(product);
 
     useEffect(() => {
         fetch(`https://calm-mountain-62998.herokuapp.com/product/${id}`)
@@ -18,7 +22,10 @@ const ProductDetails = () => {
         setImage(link)
     }
 
-    console.log(product.binaryImg);
+    const handleAddToCard = (product) => {
+        dispatch(addToCart(product))
+        swal({text:"Product added to cart",})
+    }
 
     return (
         <div className="ProductDetails">
@@ -60,7 +67,7 @@ const ProductDetails = () => {
                                     <option value="4">4</option>
                                     <option value="5">5</option>
                                 </select>
-                                <button className='btn btn-dark'>Add to cart</button>
+                                <button onClick={() => handleAddToCard(product)} className='btn btn-dark'>Add to cart</button>
                             </div>
                             <ul className="special-note">
                                 <li>Free delivery at TK 3000 purchase</li>

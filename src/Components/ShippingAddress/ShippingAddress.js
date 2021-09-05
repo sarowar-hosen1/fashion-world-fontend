@@ -14,6 +14,7 @@ const ShippingAddress = ({setShippingInfo}) => {
     };
 
 
+    // Fetch all distric useing API
     useEffect(() => {
         fetch("http://bdapis.herokuapp.com/api/v1.1/districts")
             .then(res => res.json())
