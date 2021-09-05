@@ -41,6 +41,7 @@ export const Auth = () => {
                         swal({ text: "Sing up Successfully" })
                         getToken()
                         history.replace(from);
+                        window.location.reload()
                     }).catch((error) => {
                         const errorMessage = error.message;
                         setLoginError(errorMessage)
@@ -59,7 +60,6 @@ export const Auth = () => {
                 getToken()
                 history.replace(from);
                 window.location.reload();
-
             })
             .catch((error) => {
                 const errorMessage = error.message;
@@ -79,7 +79,6 @@ export const Auth = () => {
                 getToken()
                 history.replace(from);
                 window.location.reload();
-
             })
             .catch(error => {
                 const errorMessage = error.message;
@@ -94,18 +93,18 @@ export const Auth = () => {
             localStorage.removeItem("userInfo")
             swal({ text: "Sign out successfully" })
             history.replace(from);
+            sessionStorage.removeItem("token")
             window.location.reload();
         })
     }
 
     const getToken = () => {
-        auth.currentUser.getIdToken(/* forceRefresh */ true)
-            .then(idToken => {
-                sessionStorage.setItem("token", idToken)
-            })
-            .catch(error => {
-                console.log(error);
-            })
+        auth.currentUser.getIdToken(/* forceRefresh */ true).then(function (idToken) {
+            // Send token to your backend via HTTPS
+            sessionStorage.setItem('token', idToken);
+        }).catch(function (error) {
+            console.log(error);
+        });
     }
 
 
