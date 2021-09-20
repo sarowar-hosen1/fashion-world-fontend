@@ -1,6 +1,6 @@
 # FASHION WORLD
 
-[LIVE SITE](https://github.com/facebook/create-react-app) | [SERVER](https://calm-mountain-62998.herokuapp.com/)
+[LIVE SITE](https://github.com/facebook/create-react-app) | [SERVER](https://github.com/sarowar-hosen1/fashion-world-backend)
 
 ## TECHNOLOGY
 <u>
