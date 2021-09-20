@@ -2,6 +2,8 @@
 
 [LIVE SITE](https://github.com/facebook/create-react-app) | [SERVER](https://github.com/sarowar-hosen1/fashion-world-backend)
 
+<p>A full-stack e-commerce website where people can buy products and get home delivery.</p>
+
 ## TECHNOLOGY
 <u>
   <li>React</li>  
